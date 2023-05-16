@@ -116,5 +116,43 @@ Cost functions in regression measure the discrepancy between the predicted value
 
 These cost functions provide a quantitative measure of how well the model fits the data. The choice of the cost function depends on the specific problem, the nature of the data, and the desired characteristics of the model.
 
+Linear Regression Code Example
 
+Below is a code snippet demonstrating how to perform linear regression using scikit-learn (sklearn) in Python:
+
+python
+
+# Import the necessary libraries
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+
+# Load your dataset
+# X is the feature matrix, y is the target variable
+X, y = load_data()
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Create a linear regression model
+model = LinearRegression()
+
+# Fit the model to the training data
+model.fit(X_train, y_train)
+
+# Make predictions on the test data
+y_pred = model.predict(X_test)
+
+# Evaluate the model
+mse = mean_squared_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
+
+# Print the evaluation metrics
+print("Mean Squared Error:", mse)
+print("R-squared:", r2)
+
+In this example, we import the necessary libraries, load the dataset, split it into training and testing sets, create a LinearRegression model, fit the model to the training data, make predictions on the test data, and evaluate the model using metrics such as Mean Squared Error (MSE) and R-squared.
+
+You can customize the code example based on your specific dataset and requirements. Don't forget to include any necessary data preprocessing steps before fitting the model.
+
+Feel free to modify and enhance this code snippet to suit your needs in your README.md file.
 
