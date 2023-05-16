@@ -75,5 +75,46 @@ When it comes to estimating the parameters in linear regression, two commonly us
 
 Understanding the differences between OLS and Gradient Descent helps in selecting the appropriate method based on the specific requirements and characteristics of the regression problem at hand.
 
-Feel free to customize and enhance this information as needed for your README.md file.
+
+
+## Gradient Descent Steps
+
+Gradient Descent is an iterative optimization algorithm commonly used to find the minimum of a function. Here's a general outline of the steps involved in the Gradient Descent algorithm for parameter estimation:
+
+1. **Initialize Parameters:** Start by initializing the coefficients (parameters) of the model with some initial values.
+
+2. **Calculate Predictions:** Use the current parameter values to make predictions on the training data.
+
+3. **Calculate Cost:** Calculate the cost function, which measures the discrepancy between the predicted and actual values. Commonly used cost functions include Mean Squared Error (MSE) or Mean Absolute Error (MAE).
+
+4. **Calculate Gradients:** Calculate the gradients of the cost function with respect to each parameter. The gradients indicate the direction and magnitude of the steepest ascent or descent.
+
+5. **Update Parameters:** Update the parameter values by taking a step in the opposite direction of the gradients. The size of the step is determined by the learning rate, which controls the convergence speed.
+
+6. **Repeat Steps 2-5:** Repeat steps 2 to 5 until a stopping criterion is met. This criterion can be a maximum number of iterations, reaching a desired level of accuracy, or observing minimal improvement in the cost function.
+
+7. **Obtain Final Parameters:** Once the stopping criterion is satisfied, the algorithm stops, and the final parameter values are obtained.
+
+Gradient Descent iteratively adjusts the parameter values in the direction of steepest descent to minimize the cost function. This process continues until convergence is achieved or the stopping criterion is met.
+
+It's important to note that there are variations of Gradient Descent, such as Batch Gradient Descent, Stochastic Gradient Descent, and Mini-batch Gradient Descent, which differ in how they update the parameters and use the training data.
+
+
+## Cost Functions in Regression
+
+Cost functions in regression measure the discrepancy between the predicted values and the actual values of the dependent variable. These functions play a crucial role in optimization algorithms, such as Ordinary Least Squares (OLS) or Gradient Descent, which aim to minimize the cost to obtain the optimal parameter estimates. Here are some commonly used cost functions in regression:
+
+1. **Mean Squared Error (MSE):** MSE is one of the most widely used cost functions in regression. It calculates the average of the squared differences between the predicted and actual values. MSE penalizes larger errors more than smaller errors due to the squared term.
+
+2. **Mean Absolute Error (MAE):** MAE is another popular cost function that calculates the average of the absolute differences between the predicted and actual values. Unlike MSE, MAE treats all errors equally without squaring them.
+
+3. **Root Mean Squared Error (RMSE):** RMSE is the square root of MSE. It is often used to express the error in the same unit as the dependent variable, making it easier to interpret.
+
+4. **Mean Absolute Percentage Error (MAPE):** MAPE calculates the average percentage difference between the predicted and actual values. It is commonly used when the scale of the dependent variable varies widely and you want to express the error as a percentage.
+
+5. **Huber Loss:** Huber Loss is a combination of MSE and MAE. It behaves like MSE for smaller errors and like MAE for larger errors. Huber Loss offers a balance between robustness to outliers (like MAE) and sensitivity to smaller errors (like MSE).
+
+These cost functions provide a quantitative measure of how well the model fits the data. The choice of the cost function depends on the specific problem, the nature of the data, and the desired characteristics of the model.
+
+
 
